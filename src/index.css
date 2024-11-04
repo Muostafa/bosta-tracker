@@ -54,3 +54,9 @@ html {
 .statusStep.green {
   color: #00ad21;
 }
+
+@media (max-width: 768px) {
+  .main {
+    width: 95%;
+  }
+}

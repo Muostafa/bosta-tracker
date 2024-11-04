@@ -1,43 +1,37 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
-
+import React, { createContext, useContext, useState } from "react";
+import { useParams } from "react-router-dom";
 const ShipmentContext = createContext();
 
 export const ShipmentProvider = ({ children }) => {
   const [color, setColor] = useState();
-  const [language, setLanguage] = useState("en");
   let { id } = useParams();
   const [shipmentData, setShipmentData] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetcheShipment = async () => {
-      setLoading(true);
-      try {
-        const response = await fetch(
-          `https://tracking.bosta.co/shipments/track/${id}`
-        );
+  const fetchShipment = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `https://tracking.bosta.co/shipments/track/${id}`
+      );
 
-        const data = await response.json();
-        setShipmentData(data); // Set the shipmentData to a single-item array for the new fetch
-      } catch (error) {
-        console.error(
-          "Error fetching shipment data for single tracking number:",
-          error
-        );
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetcheShipment();
-  }, []);
-
-  const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === "en" ? "ar" : "en"));
+      const data = await response.json();
+      setShipmentData(data);
+    } catch (error) {
+      console.error(
+        "Error fetching shipment data for single tracking number:",
+        error
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <ShipmentContext.Provider value={{ toggleLanguage, language }}>
+    <ShipmentContext.Provider
+      value={{ color, shipmentData, loading, setColor, fetchShipment, id }}
+    >
       {children}
     </ShipmentContext.Provider>
   );

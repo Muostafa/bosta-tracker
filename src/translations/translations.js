@@ -1,5 +1,15 @@
 export const translations = {
-  en: { ticket_created: "Shipment Created" },
+  en: {
+    ticket_created: "Shipment Created",
+    package_received: "Shipment received",
+    in_transit: "The shipment is out for delivery",
+    delivery_failed: "The shipment was not delivered",
+    not_yet_shipped: "Not yet shipped",
+    delivered_to_sender: "Delivered to sender",
+    available_for_pickup: "Available for pickup",
+    waiting_for_customer_action: "Waiting for customer action",
+    cancelled: "Shipment cancelled",
+  },
   ar: {
     "in transit": "قيد النقل",
     pending: "قيد الانتظار",
@@ -38,5 +48,13 @@ export const translations = {
     "the shipment is on its way": "الشحنة خرجت للتسليم",
     "the shipment has been delivered": "تم تسليم الشحنة",
     ticket_created: "تم انشاء الشحنة",
+    package_received: "تم استلام الشحنة من التاجر",
+    in_transit: "الشحنة خرجت للتسليم",
+    delivery_failed: "لم يتم تسليم الشحنة",
+    not_yet_shipped: "لم يتم شحنها بعد",
+    delivered_to_sender: "سلمت إلى المرسل",
+    available_for_pickup: "متاح للاستلام",
+    waiting_for_customer_action: "في انتظار العميل",
+    cancelled: "تم الغاء الشحنة",
   },
 };

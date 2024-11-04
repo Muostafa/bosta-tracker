@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/shipmentStatus.module.css";
 import ShipmentStatusProgressBar from "./ShipmentStatusProgressBar";
 import { useTranslation } from "../contexts/TranslationContext";
-import { useParams } from "react-router-dom";
-function ShipmentStatus({ shipmentData }) {
-  let { id } = useParams();
-  const [color, setColor] = useState("yellow");
+import { useShipment } from "../contexts/ShipmentContext";
+function ShipmentStatus() {
+  const { shipmentData, color, setColor, id } = useShipment();
   const [state, setState] = useState("");
   const [lastUpdated, setLastUpdated] = useState("");
   const [promisedDate, setPromisedDate] = useState("");

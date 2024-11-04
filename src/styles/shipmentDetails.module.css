@@ -20,6 +20,7 @@
 }
 
 .shipmentDetails th {
+  width: 1%;
   color: #8f9bb2;
   background-color: #fafafa;
   font-weight: bold;
@@ -29,4 +30,22 @@
 .shipmentDetails td {
   font-size: 0.9rem;
   background-color: #fff;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .mobile {
+    display: block;
+  }
+  .screen {
+    display: none;
+  }
 }
