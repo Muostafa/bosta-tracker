@@ -41,7 +41,7 @@ export const translations = {
     prices: "الأسعار",
     "call sales": "كلم المبيعات",
     login: "تسجيل الدخول",
-    "track your shipment": "تتبع شحنتك",
+    "track shipment": "تتبع شحنتك",
     "shipment number": "رقم الشحنة",
     "the shipment has been cancelled": "تم إلغاء الشحنة",
     "latest update": "اخر تحديث",
@@ -61,5 +61,6 @@ export const translations = {
     "uncovered zone": "لا نصل لهذه المنطقة",
     "cancellation - the customer refuses to give the shipment to the star":
       "الإلغاء - يرفض العميل تسليم الشحنة للنجم",
+    "tracking id": "رقم التتبع",
   },
 };

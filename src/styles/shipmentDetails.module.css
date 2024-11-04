@@ -1,9 +1,13 @@
 .container {
   width: 100%;
-  margin: 3rem 0;
+  margin: 1.5rem 0;
+
+  box-sizing: border-box;
+}
+.box {
+  margin: 1.2rem 0;
   border: 3px solid hsl(0, 0%, 97%);
   border-radius: 5px;
-  box-sizing: border-box;
 }
 .shipmentDetails {
   border-radius: 10px;

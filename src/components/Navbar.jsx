@@ -32,7 +32,9 @@ function Navbar() {
           className={styles.navbarLanguage}
         >
           <div>
-            <button>{translate("Track your shipment")}</button>
+            <button onClick={() => navigate("/")}>
+              {translate("Track shipment")}
+            </button>
           </div>
           <div className="screen">
             <button>{translate("Login")}</button>

@@ -1,0 +1,51 @@
+.idSearch {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.labelHolder {
+  margin-bottom: 0.5rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.inputField {
+  border: 1px solid #edeced;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.input {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+}
+.search {
+  border: 1px solid #edeced;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: fit-content;
+  padding: 1rem;
+}
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ff071b;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #ff071b;
+  width: 2rem;
+  background-color: #ff071b;
+  text-decoration: none;
+  padding: 0;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
