@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+// src/App.js
+import React from "react";
+import { TranslationProvider } from "./contexts/TranslationContext";
+import ShipmentTracker from "./components/ShipmentTracker";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import "./App.css";
+import Tracker from "./components/Tracker";
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TranslationProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<>main</>} />
+            <Route path="/:id" element={<Tracker />} />
+            <Route path="/tracking" element={<ShipmentTracker />} />
+          </Routes>
+        </Router>
+      </TranslationProvider>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,38 @@
+.container {
+  border: 1px solid #edeced;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #edeced;
+  font-weight: 900;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+.details > * {
+  width: 25%;
+}
+
+h4,
+h3,
+h5 {
+  margin: 0;
+}
+
+h4 {
+  color: #8e8e8e;
+  font-weight: 300;
+}
+h3 {
+  font-weight: 900;
+  font-size: large;
+}

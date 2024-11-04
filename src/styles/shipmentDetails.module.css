@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  margin: 3rem 0;
+  border: 3px solid hsl(0, 0%, 97%);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.shipmentDetails {
+  border-radius: 10px;
+  width: 100%;
+  background-color: #fafafa;
+  border: none;
+  border-collapse: collapse;
+}
+
+.shipmentDetails th,
+.shipmentDetails td {
+  padding: 0.5rem;
+  border-top: 3px solid #f8f8f8;
+}
+
+.shipmentDetails th {
+  color: #8f9bb2;
+  background-color: #fafafa;
+  font-weight: bold;
+  text-align: start;
+}
+
+.shipmentDetails td {
+  font-size: 0.9rem;
+  background-color: #fff;
+}
