@@ -34,10 +34,10 @@ function Navbar() {
           <div>
             <button>{translate("Track your shipment")}</button>
           </div>
-          <div>
+          <div className="screen">
             <button>{translate("Login")}</button>
           </div>
-          <div>
+          <div className={styles.languageButton}>
             {language === "en" ? (
               <button onClick={() => toggleLanguage("ar")}>عربي</button>
             ) : (

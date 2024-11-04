@@ -9,6 +9,8 @@ export const translations = {
     available_for_pickup: "Available for pickup",
     waiting_for_customer_action: "Waiting for customer action",
     cancelled: "Shipment cancelled",
+    out_for_delivery: "Out for delivery",
+    delivered: "Delivered",
   },
   ar: {
     "in transit": "قيد النقل",
@@ -56,5 +58,8 @@ export const translations = {
     available_for_pickup: "متاح للاستلام",
     waiting_for_customer_action: "في انتظار العميل",
     cancelled: "تم الغاء الشحنة",
+    "uncovered zone": "لا نصل لهذه المنطقة",
+    "cancellation - the customer refuses to give the shipment to the star":
+      "الإلغاء - يرفض العميل تسليم الشحنة للنجم",
   },
 };

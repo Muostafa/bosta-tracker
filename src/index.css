@@ -60,3 +60,9 @@ html {
     width: 95%;
   }
 }
+
+@media (max-width: 300px) {
+  .screen {
+    display: none;
+  }
+}

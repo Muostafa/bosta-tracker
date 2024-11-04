@@ -3,6 +3,21 @@ import styles from "../styles/shipmentStatus.module.css";
 import ShipmentStatusProgressBar from "./ShipmentStatusProgressBar";
 import { useTranslation } from "../contexts/TranslationContext";
 import { useShipment } from "../contexts/ShipmentContext";
+
+function getColor(x) {
+  if (!x) return "yellow";
+  switch (x.toUpperCase()) {
+    case "DELIVERED":
+      return "green";
+    case "DELIVERED_TO_SENDER":
+      return "yellow";
+    case "CANCELLED":
+      return "red";
+    default:
+      return "yellow";
+  }
+}
+
 function ShipmentStatus() {
   const { shipmentData, color, setColor, id } = useShipment();
   const [state, setState] = useState("");
@@ -46,20 +61,6 @@ function ShipmentStatus() {
     return date.toLocaleDateString("en-US", options);
   }
 
-  function getColor(x) {
-    if (!x) return "yellow";
-    switch (x.toUpperCase()) {
-      case "DELIVERED":
-        return "green";
-      case "DELIVERED_TO_SENDER":
-        return "yellow";
-      case "CANCELLED":
-        return "red";
-      default:
-        return "yellow";
-    }
-  }
-
   function getState(x) {
     if (!x) return "";
     switch (x.toUpperCase()) {
@@ -73,7 +74,7 @@ function ShipmentStatus() {
         setStatus(1);
         return "The shipment has been cancelled";
       default:
-        return "yellow";
+        return "The shipment has been cancelled";
     }
   }
 
@@ -114,7 +115,9 @@ function ShipmentStatus() {
           <h3>{translate(promisedDate)}</h3>
         </div>
       </div>
-      <ShipmentStatusProgressBar status={status} color={color} />
+      <div className={styles.screen}>
+        <ShipmentStatusProgressBar status={status} color={color} />
+      </div>
     </div>
   );
 }
