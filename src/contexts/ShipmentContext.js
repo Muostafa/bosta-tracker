@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 const ShipmentContext = createContext();
 
 export const ShipmentProvider = ({ children }) => {
-  const [color, setColor] = useState();
   let { id } = useParams();
+  const [color, setColor] = useState();
   const [shipmentData, setShipmentData] = useState([]);
-
   const [loading, setLoading] = useState(true);
 
   const fetchShipment = async () => {
